@@ -23,3 +23,9 @@ def test_word_count_default():
 
     assert actual == -1, "Default counts are different"
 
+def test_word_count_l():
+    sys.argv = ["ccwc.py", "-l", text_file]
+    actual = word_count(sys.argv)
+
+    assert actual == 1, "Line counts are different"
+
